@@ -35,12 +35,6 @@
     <p></p>
     <input type="button" onclick="launch()" value="啟動">
     <hr>
-    <script>
-        function launch() {
-            var = random(1992, 2017);
-            d3.select('p').text(num);
-        };
-    </script>
     <svg width="300" height="200" id_svg01>
         <svg width="300" height="200">
         <line x1="10" y1=10 x2=300 y2=10 stroke="black"></line>
@@ -51,9 +45,28 @@
         <circle cx="150" cy="120" r="15"></circle>
         <rect x="200" y="100"> </rect>
         <svg width="300" height="200">
-        <text x="100 y="200 font-size="10" font-family="arial">A</text>
+        
+        <!--4. 這條有點寫錯，參考下面我寫的-->
+        <!--<text x="100 y="200 font-size="10" font-family="arial">A</text>-->
+        <text x="100" y="200" font-size="10" font-family="arial">A</text>
+        
         </svg> 
     </svg>
+    
+    <!--0. 我習慣把script放在最後, 對著網頁按滑鼠右鍵=>檢查, 就可以看到錯誤 -->
+    <script>
+        // 2. random這個funtion 也要自己寫喔
+        function random(m, n) {
+            // 3. 這條我不確定你們上課有沒有說，看不懂的話可以問老師
+            return Math.ceil((m-n)*Math.random()+n);
+        }
+        function launch() {
+            // 1. 宣告變數的地方寫錯
+            //var = random(1992, 2017);
+            var num = random(1992, 2017);
+            d3.select('p').text(num);
+        };
+    </script>
 </body>
 
 </html>
