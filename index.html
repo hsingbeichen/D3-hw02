@@ -58,21 +58,16 @@
         </svg>
     </svg>
     <hr>
-        <svg width="800" height="300">
-            <rect x="0" y="0" width="300" height="200"></rect></svg>
+        <svg1 width="300" height="300">
+            <rect x="0" y="0" width="300" height="200"></rect></svg1>
     <script>
 for(var i=0; i<20; i++){
   var thisNum = random(20,300);
-  d3.select("svg").append("rect").attr({x: 10,y: 10+12*i,width: thisNum,height: 10,fill: "red"
+  d3.select("svg1").append("rect").attr({x: 10,y: 10+12*i,width: thisNum,height: 10,fill: "red"
   });
-  d3.select("svg")
+  d3.select("svg1")
     .append("text")
-    .attr({
-    x: thisNum+15,
-    y: 20+12*i,
-    "font-size": 12
-  }).text(thisNum);
-}
+    .attr({x: thisNum+15,y: 20+12*i,"font-size": 12}).text(thisNum);}
 function random(n,m){
   return Math.ceil(Math.random()*(m-n)+n);
 }   </script>  </body>
