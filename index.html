@@ -63,12 +63,29 @@
         </svg>
     </svg>
     <hr>
-        <svg width="400" height="300"></svg>
+        <svg width="400" height="300">
     <script>
-        for (var i=0;i<10;i++) {
-           var theNum=random(100,300) ;d3.select("svg").append("rect").attr({x:10,y:10+12*i,width:20*2,height:10,fill:"red"})
-        };
-        d3.select("svg").append("text").attr({x:theNum+15,y:20-12*i,font-size:"16px";}).text(theNum);
-    </script>> </body>
+ for(var i=0; i<20; i++){
+  var thisNum = random(20,300);
+  d3.select("svg")
+    .append("rect")
+    .attr({
+    x: 10,
+    y: 10+12*i,
+    width: thisNum,
+    height: 10,
+    fill: "red"
+  });
+  d3.select("svg")
+    .append("text")
+    .attr({
+    x: thisNum+15,
+    y: 20+12*i,
+    "font-size": 12
+  }).text(thisNum);
+}
+function random(n,m){
+  return Math.ceil(Math.random()*(m-n)+n);
+} </script> </svg> </body>
 
 </html>
